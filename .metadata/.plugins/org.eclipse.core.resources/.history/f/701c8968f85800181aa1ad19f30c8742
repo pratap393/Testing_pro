@@ -1,0 +1,33 @@
+package test1;
+
+class ABC extends Thread{
+	public void run() {
+		System.out.println("hiii");
+		System.out.println("child "+currentThread().getName());
+		System.out.println("child "+currentThread().getPriority());
+		System.out.println("child "+currentThread().getClass());
+	}
+}
+public class Test1{
+
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		System.out.println("Hiiii1Pull");
+		ABC t=new ABC();
+		t.start();
+		t.currentThread().setPriority(10);
+		for(int i=0;i<10;i++) {
+		System.out.println("byeee");
+		}
+		System.out.println(t.currentThread().getName());
+		System.out.println(t.currentThread().getPriority());
+		System.out.println(t.currentThread().getClass());
+		t.currentThread().setName("Ram");
+		t.currentThread().setPriority(10);
+		System.out.println(t.currentThread().getName());
+		System.out.println(t.currentThread().getPriority());
+		System.out.println(t.currentThread().getClass());
+	}
+	
+
+}

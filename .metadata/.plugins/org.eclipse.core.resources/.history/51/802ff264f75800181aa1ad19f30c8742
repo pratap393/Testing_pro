@@ -1,0 +1,17 @@
+package test1;
+
+public class Test1 extends Thread {
+
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		System.out.println("Hiiii1Pull");
+		Thread t=new Thread();
+		t.start();
+		System.out.println("byeee");
+		
+	}
+	public void run() {
+		System.out.println("hiii");
+	}
+
+}

@@ -1,0 +1,20 @@
+package test1;
+
+class ABC extends Thread{
+	public void run() {
+		System.out.println("hiii");
+	}
+}
+public class Test1{
+
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		System.out.println("Hiiii1Pull");
+		ABC t=new ABC();
+		t.start();
+		System.out.println("byeee");
+		
+	}
+	
+
+}

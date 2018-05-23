@@ -1,0 +1,37 @@
+package test2;
+
+class ABC implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("hiii");
+		currentThread().setPriority(8);
+		System.out.println("child "+currentThread().getName());
+		System.out.println("child "+currentThread().getPriority());
+		System.out.println("child "+currentThread().getClass());
+	}
+	
+}
+public class Test2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hiiii1234");
+		ABC t1=new ABC();
+		Thread t=new Thread(t1);
+		t.start();
+		for(int i=0;i<10;i++) {
+			System.out.println("byeee");
+			}
+			System.out.println(t.currentThread().getName());
+			System.out.println(t.currentThread().getPriority());
+			System.out.println(t.currentThread().getClass());
+			t.currentThread().setName("Ram");
+			t.currentThread().setPriority(10);
+			System.out.println(t.currentThread().getName());
+			System.out.println(t.currentThread().getPriority());
+			System.out.println(t.currentThread().getClass());
+	}
+
+}
